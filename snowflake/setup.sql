@@ -1,0 +1,2 @@
+-- Snowflake setup: database, warehouse, role, schemas, raw tables, file format, stage.
+-- Placeholder — DDL to be implemented.

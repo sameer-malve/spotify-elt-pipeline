@@ -1,0 +1,9 @@
+spotipy
+boto3
+snowflake-connector-python
+apache-airflow[amazon,snowflake]
+dbt-snowflake
+python-dotenv
+streamlit
+plotly
+pandas

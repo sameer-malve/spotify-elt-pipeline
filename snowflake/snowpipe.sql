@@ -1,0 +1,2 @@
+-- Snowpipe definition: auto-ingest from S3 stage into raw tables.
+-- Placeholder — pipe definitions to be implemented.
