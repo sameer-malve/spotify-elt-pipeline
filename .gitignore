@@ -1,6 +1,9 @@
 # Environment
 .env
 
+# Spotipy token cache
+.cache
+
 # dbt
 dbt/profiles.yml
 
