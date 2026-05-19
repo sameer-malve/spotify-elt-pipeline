@@ -1,0 +1,59 @@
+version: 2
+
+models:
+  - name: stg_tracks
+    description: Cleaned, typed staging view over RAW.V_TRACKS.
+    columns:
+      - name: track_id
+        description: Spotify track ID — primary key.
+        tests:
+          - not_null
+          - unique
+      - name: track_name
+        description: Track title as returned by the Spotify API.
+      - name: duration_ms
+        description: Track duration in milliseconds.
+      - name: duration_minutes
+        description: Track duration in minutes, rounded to 2 decimal places.
+      - name: is_explicit
+        description: True when Spotify flags the track as containing explicit content.
+      - name: popularity
+        description: Spotify-computed popularity score (0-100, higher = more popular).
+      - name: album_id
+        description: Spotify ID of the album containing the track.
+      - name: album_name
+        description: Display name of the track's album.
+      - name: raw_json
+        description: Full per-record JSON payload — preserved for downstream nested-field access (e.g. the artists array).
+      - name: _loaded_at
+        description: Timestamp at which Snowpipe loaded this row into RAW.
+
+  - name: stg_audio_features
+    description: Staging view over RAW.V_AUDIO_FEATURES — derived features per track.
+    columns:
+      - name: track_id
+        description: Spotify track ID — primary key, joins to stg_tracks.
+        tests:
+          - not_null
+          - unique
+      - name: duration_ms
+        description: Track duration in milliseconds.
+      - name: is_explicit
+        description: True when the track is flagged explicit.
+      - name: popularity
+        description: Spotify popularity score (0-100).
+      - name: _loaded_at
+        description: Timestamp at which Snowpipe loaded this row into RAW.
+
+  - name: stg_artists
+    description: Staging view over RAW.V_ARTISTS — deduplicated artist directory.
+    columns:
+      - name: artist_id
+        description: Spotify artist ID — primary key.
+        tests:
+          - not_null
+          - unique
+      - name: artist_name
+        description: Display name of the artist.
+      - name: _loaded_at
+        description: Timestamp at which Snowpipe loaded this row into RAW.

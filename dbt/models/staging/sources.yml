@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: raw
+    description: Raw Spotify data landed in Snowflake via Snowpipe.
+    database: SPOTIFY_DB
+    schema: RAW
+    tables:
+      - name: v_tracks
+        description: One row per Spotify track in the daily extract.
+      - name: v_audio_features
+        description: Derived audio features per track (duration, explicit, popularity).
+      - name: v_artists
+        description: Deduplicated artists across the day's tracks.

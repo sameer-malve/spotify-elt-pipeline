@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: mart_top_tracks
+    description: One row per track with derived mood_score and audio_profile classification.
+    columns:
+      - name: track_id
+        description: Spotify track ID — primary key.
+        tests:
+          - not_null
+          - unique
+      - name: mood_score
+        description: ROUND((popularity * 0.6 + (1 - is_explicit::INT) * 0.4) * 100, 2).
+      - name: audio_profile
+        description: Bucket label — Explicit Banger / Family Friendly Hit / Underground / Mid Tier.
+
+  - name: mart_artist_summary
+    description: One row per artist with rollup stats across their tracks in the extract.
+    columns:
+      - name: artist_id
+        description: Spotify artist ID — primary key.
+        tests:
+          - not_null
+          - unique
+      - name: track_count
+        description: Number of tracks attributed to this artist in the extract.
+      - name: avg_popularity
+        description: Mean popularity across this artist's tracks.
+      - name: max_popularity
+        description: Max popularity across this artist's tracks.
