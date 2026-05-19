@@ -1,21 +1,11 @@
 
 
-WITH track_artists AS (
-    SELECT
-        t.track_id,
-        t.popularity,
-        a.value:id::VARCHAR AS artist_id
-    FROM SPOTIFY_DB.STAGING.stg_tracks t,
-         LATERAL FLATTEN(input => t.raw_json:artists) a
-)
-
 SELECT
-    sa.artist_id,
-    sa.artist_name,
-    COUNT(*)              AS track_count,
-    AVG(ta.popularity)    AS avg_popularity,
-    MAX(ta.popularity)    AS max_popularity
-FROM track_artists ta
-JOIN SPOTIFY_DB.STAGING.stg_artists sa
-    ON ta.artist_id = sa.artist_id
-GROUP BY sa.artist_id, sa.artist_name
+    primary_artist_id                  AS artist_id,
+    primary_artist_name                AS artist_name,
+    COUNT(*)                           AS track_count,
+    AVG(duration_minutes)              AS avg_duration_minutes,
+    SUM(CAST(is_explicit AS INT))      AS total_explicit_tracks
+FROM SPOTIFY_DB.STAGING.stg_tracks
+WHERE primary_artist_id IS NOT NULL
+GROUP BY primary_artist_id, primary_artist_name

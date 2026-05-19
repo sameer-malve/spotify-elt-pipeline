@@ -1666,3 +1666,997 @@ having count(*) > 1
 [0m18:41:42.112312 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002094EF0A5D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020953201F40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020953201FF0>]}
 [0m18:41:42.112762 [debug] [MainThread]: Flushing usage events
 [0m18:41:42.550665 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:02:18.283294 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017F3C489D30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017F38EB6C10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017F3D657C50>]}
+
+
+============================== 19:02:18.289514 | e3b79abd-7d3c-4ef7-8425-220794c86e9e ==============================
+[0m19:02:18.289514 [info ] [MainThread]: Running with dbt=1.11.10
+[0m19:02:18.290209 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': '.', 'invocation_command': 'dbt run --profiles-dir .', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\samee\\Documents\\spotify-elt-pipeline\\dbt\\logs'}
+[0m19:02:19.078844 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m19:02:19.079258 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m19:02:19.079482 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m19:02:19.260356 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e3b79abd-7d3c-4ef7-8425-220794c86e9e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017F3C969F30>]}
+[0m19:02:19.306341 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e3b79abd-7d3c-4ef7-8425-220794c86e9e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017F5FE07DF0>]}
+[0m19:02:19.308029 [info ] [MainThread]: Registered adapter: snowflake=1.11.5
+[0m19:02:19.595231 [debug] [MainThread]: checksum: 2f247960199844e016e6a527f21364251736722c6212f4b11e96849fe0fc9e96, vars: {}, profile: , target: , version: 1.11.10
+[0m19:02:19.730184 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m19:02:19.730793 [debug] [MainThread]: Partial parsing: updated file: spotify_elt_pipeline://models\marts\mart_top_tracks.sql
+[0m19:02:20.073392 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.spotify_elt_pipeline.intermediate
+[0m19:02:20.086224 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e3b79abd-7d3c-4ef7-8425-220794c86e9e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017F604C9D50>]}
+[0m19:02:20.151040 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\samee\Documents\spotify-elt-pipeline\dbt\target\manifest.json
+[0m19:02:20.153239 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\samee\Documents\spotify-elt-pipeline\dbt\target\semantic_manifest.json
+[0m19:02:20.172052 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e3b79abd-7d3c-4ef7-8425-220794c86e9e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017F603864E0>]}
+[0m19:02:20.172487 [info ] [MainThread]: Found 5 models, 10 data tests, 3 sources, 528 macros
+[0m19:02:20.172918 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e3b79abd-7d3c-4ef7-8425-220794c86e9e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017F6076D0F0>]}
+[0m19:02:20.176219 [info ] [MainThread]: 
+[0m19:02:20.177042 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m19:02:20.177495 [info ] [MainThread]: 
+[0m19:02:20.178849 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m19:02:20.184798 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_SPOTIFY_DB'
+[0m19:02:20.286517 [debug] [ThreadPool]: Using snowflake connection "list_SPOTIFY_DB"
+[0m19:02:20.286881 [debug] [ThreadPool]: On list_SPOTIFY_DB: show terse schemas in database SPOTIFY_DB
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.10", "profile_name": "spotify_elt_pipeline", "target_name": "dev", "connection_name": "list_SPOTIFY_DB"} */
+[0m19:02:20.287157 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:02:21.674180 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 1.387 seconds
+[0m19:02:21.677403 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_SPOTIFY_DB_STAGING'
+[0m19:02:21.689056 [debug] [ThreadPool]: Using snowflake connection "list_SPOTIFY_DB_STAGING"
+[0m19:02:21.689499 [debug] [ThreadPool]: On list_SPOTIFY_DB_STAGING: show objects in SPOTIFY_DB.STAGING
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.10", "profile_name": "spotify_elt_pipeline", "target_name": "dev", "connection_name": "list_SPOTIFY_DB_STAGING"} */;
+[0m19:02:21.689708 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:02:22.782518 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 1.093 seconds
+[0m19:02:22.785017 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e3b79abd-7d3c-4ef7-8425-220794c86e9e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017F60B2D4A0>]}
+[0m19:02:22.789911 [debug] [Thread-2 (]: Began running node model.spotify_elt_pipeline.stg_artists
+[0m19:02:22.790250 [debug] [Thread-4 (]: Began running node model.spotify_elt_pipeline.stg_tracks
+[0m19:02:22.790473 [debug] [Thread-3 (]: Began running node model.spotify_elt_pipeline.stg_audio_features
+[0m19:02:22.790829 [info ] [Thread-2 (]: 1 of 5 START sql view model STAGING.stg_artists ................................ [RUN]
+[0m19:02:22.791124 [info ] [Thread-4 (]: 3 of 5 START sql view model STAGING.stg_tracks ................................. [RUN]
+[0m19:02:22.793125 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.spotify_elt_pipeline.stg_artists'
+[0m19:02:22.793989 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.spotify_elt_pipeline.stg_tracks'
+[0m19:02:22.791478 [info ] [Thread-3 (]: 2 of 5 START sql view model STAGING.stg_audio_features ......................... [RUN]
+[0m19:02:22.794462 [debug] [Thread-2 (]: Began compiling node model.spotify_elt_pipeline.stg_artists
+[0m19:02:22.794839 [debug] [Thread-4 (]: Began compiling node model.spotify_elt_pipeline.stg_tracks
+[0m19:02:22.795218 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.spotify_elt_pipeline.stg_audio_features'
+[0m19:02:22.802226 [debug] [Thread-2 (]: Writing injected SQL for node "model.spotify_elt_pipeline.stg_artists"
+[0m19:02:22.805026 [debug] [Thread-4 (]: Writing injected SQL for node "model.spotify_elt_pipeline.stg_tracks"
+[0m19:02:22.805461 [debug] [Thread-3 (]: Began compiling node model.spotify_elt_pipeline.stg_audio_features
+[0m19:02:22.808920 [debug] [Thread-3 (]: Writing injected SQL for node "model.spotify_elt_pipeline.stg_audio_features"
+[0m19:02:22.809626 [debug] [Thread-2 (]: Began executing node model.spotify_elt_pipeline.stg_artists
+[0m19:02:22.830118 [debug] [Thread-2 (]: Writing runtime sql for node "model.spotify_elt_pipeline.stg_artists"
+[0m19:02:22.830851 [debug] [Thread-3 (]: Began executing node model.spotify_elt_pipeline.stg_audio_features
+[0m19:02:22.833382 [debug] [Thread-3 (]: Writing runtime sql for node "model.spotify_elt_pipeline.stg_audio_features"
+[0m19:02:22.833652 [debug] [Thread-4 (]: Began executing node model.spotify_elt_pipeline.stg_tracks
+[0m19:02:22.835560 [debug] [Thread-4 (]: Writing runtime sql for node "model.spotify_elt_pipeline.stg_tracks"
+[0m19:02:22.836154 [debug] [Thread-2 (]: Using snowflake connection "model.spotify_elt_pipeline.stg_artists"
+[0m19:02:22.836535 [debug] [Thread-2 (]: On model.spotify_elt_pipeline.stg_artists: create or replace   view SPOTIFY_DB.STAGING.stg_artists
+  
+  
+  
+  
+  as (
+    WITH ranked AS (
+    SELECT
+        artist_id,
+        artist_name,
+        _loaded_at,
+        ROW_NUMBER() OVER (PARTITION BY artist_id ORDER BY _loaded_at DESC) AS rn
+    FROM SPOTIFY_DB.RAW.v_artists
+    WHERE artist_id IS NOT NULL
+)
+
+SELECT
+    artist_id,
+    artist_name,
+    _loaded_at
+FROM ranked
+WHERE rn = 1
+  )
+/* {"app": "dbt", "dbt_version": "1.11.10", "profile_name": "spotify_elt_pipeline", "target_name": "dev", "node_id": "model.spotify_elt_pipeline.stg_artists"} */;
+[0m19:02:22.836818 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m19:02:22.837850 [debug] [Thread-4 (]: Using snowflake connection "model.spotify_elt_pipeline.stg_tracks"
+[0m19:02:22.838932 [debug] [Thread-3 (]: Using snowflake connection "model.spotify_elt_pipeline.stg_audio_features"
+[0m19:02:22.839212 [debug] [Thread-4 (]: On model.spotify_elt_pipeline.stg_tracks: create or replace   view SPOTIFY_DB.STAGING.stg_tracks
+  
+  
+  
+  
+  as (
+    WITH ranked AS (
+    SELECT
+        track_id,
+        track_name,
+        duration_ms,
+        ROUND(duration_ms / 60000.0, 2) AS duration_minutes,
+        explicit AS is_explicit,
+        popularity,
+        album_id,
+        album_name,
+        raw_json,
+        _loaded_at,
+        ROW_NUMBER() OVER (PARTITION BY track_id ORDER BY _loaded_at DESC) AS rn
+    FROM SPOTIFY_DB.RAW.v_tracks
+    WHERE track_id IS NOT NULL
+)
+
+SELECT
+    track_id,
+    track_name,
+    duration_ms,
+    duration_minutes,
+    is_explicit,
+    popularity,
+    album_id,
+    album_name,
+    raw_json,
+    _loaded_at
+FROM ranked
+WHERE rn = 1
+  )
+/* {"app": "dbt", "dbt_version": "1.11.10", "profile_name": "spotify_elt_pipeline", "target_name": "dev", "node_id": "model.spotify_elt_pipeline.stg_tracks"} */;
+[0m19:02:22.839609 [debug] [Thread-3 (]: On model.spotify_elt_pipeline.stg_audio_features: create or replace   view SPOTIFY_DB.STAGING.stg_audio_features
+  
+  
+  
+  
+  as (
+    WITH ranked AS (
+    SELECT
+        track_id,
+        duration_ms,
+        explicit AS is_explicit,
+        popularity,
+        _loaded_at,
+        ROW_NUMBER() OVER (PARTITION BY track_id ORDER BY _loaded_at DESC) AS rn
+    FROM SPOTIFY_DB.RAW.v_audio_features
+    WHERE track_id IS NOT NULL
+)
+
+SELECT
+    track_id,
+    duration_ms,
+    is_explicit,
+    popularity,
+    _loaded_at
+FROM ranked
+WHERE rn = 1
+  )
+/* {"app": "dbt", "dbt_version": "1.11.10", "profile_name": "spotify_elt_pipeline", "target_name": "dev", "node_id": "model.spotify_elt_pipeline.stg_audio_features"} */;
+[0m19:02:22.840328 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m19:02:22.840685 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m19:02:23.503510 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.663 seconds
+[0m19:02:23.522403 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.682 seconds
+[0m19:02:23.524364 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e3b79abd-7d3c-4ef7-8425-220794c86e9e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017F61D55550>]}
+[0m19:02:23.524615 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e3b79abd-7d3c-4ef7-8425-220794c86e9e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017F607CD650>]}
+[0m19:02:23.525104 [info ] [Thread-3 (]: 2 of 5 OK created sql view model STAGING.stg_audio_features .................... [[32mSUCCESS 1[0m in 0.73s]
+[0m19:02:23.525991 [debug] [Thread-3 (]: Finished running node model.spotify_elt_pipeline.stg_audio_features
+[0m19:02:23.525543 [info ] [Thread-4 (]: 3 of 5 OK created sql view model STAGING.stg_tracks ............................ [[32mSUCCESS 1[0m in 0.73s]
+[0m19:02:23.526476 [debug] [Thread-4 (]: Finished running node model.spotify_elt_pipeline.stg_tracks
+[0m19:02:23.528350 [debug] [Thread-5 (]: Began running node model.spotify_elt_pipeline.mart_top_tracks
+[0m19:02:23.528676 [info ] [Thread-5 (]: 4 of 5 START sql table model STAGING.mart_top_tracks ........................... [RUN]
+[0m19:02:23.529133 [debug] [Thread-5 (]: Acquiring new snowflake connection 'model.spotify_elt_pipeline.mart_top_tracks'
+[0m19:02:23.529414 [debug] [Thread-5 (]: Began compiling node model.spotify_elt_pipeline.mart_top_tracks
+[0m19:02:23.534849 [debug] [Thread-5 (]: Writing injected SQL for node "model.spotify_elt_pipeline.mart_top_tracks"
+[0m19:02:23.536294 [debug] [Thread-5 (]: Began executing node model.spotify_elt_pipeline.mart_top_tracks
+[0m19:02:23.556304 [debug] [Thread-5 (]: Writing runtime sql for node "model.spotify_elt_pipeline.mart_top_tracks"
+[0m19:02:23.558649 [debug] [Thread-5 (]: Using snowflake connection "model.spotify_elt_pipeline.mart_top_tracks"
+[0m19:02:23.559072 [debug] [Thread-5 (]: On model.spotify_elt_pipeline.mart_top_tracks: create or replace transient table SPOTIFY_DB.STAGING.mart_top_tracks
+    
+    
+    
+    as (
+
+SELECT
+    t.track_id,
+    t.track_name,
+    t.duration_ms,
+    t.duration_minutes,
+    CAST(t.is_explicit AS BOOLEAN) AS is_explicit,
+    CAST(t.popularity AS INT) AS popularity,
+    t.album_id,
+    t.album_name,
+    ROUND((CAST(t.popularity AS FLOAT) / 100 * 0.6 + (1 - CAST(t.is_explicit AS INT)) * 0.4), 4) AS mood_score,
+    CASE
+        WHEN t.is_explicit = TRUE  AND t.popularity > 70 THEN 'Explicit Banger'
+        WHEN t.is_explicit = FALSE AND t.popularity > 70 THEN 'Family Friendly Hit'
+        WHEN t.popularity < 40                            THEN 'Underground'
+        ELSE 'Mid Tier'
+    END AS audio_profile,
+    t._loaded_at
+FROM SPOTIFY_DB.STAGING.stg_tracks t
+JOIN SPOTIFY_DB.STAGING.stg_audio_features af
+    ON t.track_id = af.track_id
+    )
+
+/* {"app": "dbt", "dbt_version": "1.11.10", "profile_name": "spotify_elt_pipeline", "target_name": "dev", "node_id": "model.spotify_elt_pipeline.mart_top_tracks"} */;
+[0m19:02:23.559299 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m19:02:24.088089 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.251 seconds
+[0m19:02:24.090705 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e3b79abd-7d3c-4ef7-8425-220794c86e9e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017F61CB7070>]}
+[0m19:02:24.091350 [info ] [Thread-2 (]: 1 of 5 OK created sql view model STAGING.stg_artists ........................... [[32mSUCCESS 1[0m in 1.30s]
+[0m19:02:24.091957 [debug] [Thread-2 (]: Finished running node model.spotify_elt_pipeline.stg_artists
+[0m19:02:24.092472 [debug] [Thread-3 (]: Began running node model.spotify_elt_pipeline.mart_artist_summary
+[0m19:02:24.092860 [info ] [Thread-3 (]: 5 of 5 START sql table model STAGING.mart_artist_summary ....................... [RUN]
+[0m19:02:24.094622 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.spotify_elt_pipeline.stg_audio_features, now model.spotify_elt_pipeline.mart_artist_summary)
+[0m19:02:24.094839 [debug] [Thread-3 (]: Began compiling node model.spotify_elt_pipeline.mart_artist_summary
+[0m19:02:24.099974 [debug] [Thread-3 (]: Writing injected SQL for node "model.spotify_elt_pipeline.mart_artist_summary"
+[0m19:02:24.101521 [debug] [Thread-3 (]: Began executing node model.spotify_elt_pipeline.mart_artist_summary
+[0m19:02:24.104250 [debug] [Thread-3 (]: Writing runtime sql for node "model.spotify_elt_pipeline.mart_artist_summary"
+[0m19:02:24.105620 [debug] [Thread-3 (]: Using snowflake connection "model.spotify_elt_pipeline.mart_artist_summary"
+[0m19:02:24.105926 [debug] [Thread-3 (]: On model.spotify_elt_pipeline.mart_artist_summary: create or replace transient table SPOTIFY_DB.STAGING.mart_artist_summary
+    
+    
+    
+    as (
+
+WITH track_artists AS (
+    SELECT
+        t.track_id,
+        t.popularity,
+        a.value:id::VARCHAR AS artist_id
+    FROM SPOTIFY_DB.STAGING.stg_tracks t,
+         LATERAL FLATTEN(input => t.raw_json:artists) a
+)
+
+SELECT
+    sa.artist_id,
+    sa.artist_name,
+    COUNT(*)              AS track_count,
+    AVG(ta.popularity)    AS avg_popularity,
+    MAX(ta.popularity)    AS max_popularity
+FROM track_artists ta
+JOIN SPOTIFY_DB.STAGING.stg_artists sa
+    ON ta.artist_id = sa.artist_id
+GROUP BY sa.artist_id, sa.artist_name
+    )
+
+/* {"app": "dbt", "dbt_version": "1.11.10", "profile_name": "spotify_elt_pipeline", "target_name": "dev", "node_id": "model.spotify_elt_pipeline.mart_artist_summary"} */;
+[0m19:02:25.079240 [debug] [Thread-5 (]: SQL status: SUCCESS 50 in 1.520 seconds
+[0m19:02:25.081985 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e3b79abd-7d3c-4ef7-8425-220794c86e9e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017F61CFD9D0>]}
+[0m19:02:25.082601 [info ] [Thread-5 (]: 4 of 5 OK created sql table model STAGING.mart_top_tracks ...................... [[32mSUCCESS 50[0m in 1.55s]
+[0m19:02:25.083358 [debug] [Thread-5 (]: Finished running node model.spotify_elt_pipeline.mart_top_tracks
+[0m19:02:25.113512 [debug] [Thread-3 (]: SQL status: SUCCESS 43 in 1.007 seconds
+[0m19:02:25.116324 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e3b79abd-7d3c-4ef7-8425-220794c86e9e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017F61C8F770>]}
+[0m19:02:25.117254 [info ] [Thread-3 (]: 5 of 5 OK created sql table model STAGING.mart_artist_summary .................. [[32mSUCCESS 43[0m in 1.02s]
+[0m19:02:25.117929 [debug] [Thread-3 (]: Finished running node model.spotify_elt_pipeline.mart_artist_summary
+[0m19:02:25.119649 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:02:25.120065 [debug] [MainThread]: Connection 'list_SPOTIFY_DB' was left open.
+[0m19:02:25.120319 [debug] [MainThread]: On list_SPOTIFY_DB: Close
+[0m19:02:25.229216 [debug] [MainThread]: Connection 'list_SPOTIFY_DB_STAGING' was left open.
+[0m19:02:25.229574 [debug] [MainThread]: On list_SPOTIFY_DB_STAGING: Close
+[0m19:02:25.351184 [debug] [MainThread]: Connection 'model.spotify_elt_pipeline.stg_artists' was left open.
+[0m19:02:25.351563 [debug] [MainThread]: On model.spotify_elt_pipeline.stg_artists: Close
+[0m19:02:25.472925 [debug] [MainThread]: Connection 'model.spotify_elt_pipeline.stg_tracks' was left open.
+[0m19:02:25.473331 [debug] [MainThread]: On model.spotify_elt_pipeline.stg_tracks: Close
+[0m19:02:25.598185 [debug] [MainThread]: Connection 'model.spotify_elt_pipeline.mart_artist_summary' was left open.
+[0m19:02:25.598618 [debug] [MainThread]: On model.spotify_elt_pipeline.mart_artist_summary: Close
+[0m19:02:25.716674 [debug] [MainThread]: Connection 'model.spotify_elt_pipeline.mart_top_tracks' was left open.
+[0m19:02:25.717034 [debug] [MainThread]: On model.spotify_elt_pipeline.mart_top_tracks: Close
+[0m19:02:25.838593 [info ] [MainThread]: 
+[0m19:02:25.839181 [info ] [MainThread]: Finished running 2 table models, 3 view models in 0 hours 0 minutes and 5.66 seconds (5.66s).
+[0m19:02:25.841856 [debug] [MainThread]: Command end result
+[0m19:02:25.874397 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\samee\Documents\spotify-elt-pipeline\dbt\target\manifest.json
+[0m19:02:25.876918 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\samee\Documents\spotify-elt-pipeline\dbt\target\semantic_manifest.json
+[0m19:02:25.881118 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\samee\Documents\spotify-elt-pipeline\dbt\target\run_results.json
+[0m19:02:25.881392 [info ] [MainThread]: 
+[0m19:02:25.881828 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m19:02:25.882188 [info ] [MainThread]: 
+[0m19:02:25.882527 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=5
+[0m19:02:25.883345 [debug] [MainThread]: Command `dbt run` succeeded at 19:02:25.883208 after 7.71 seconds
+[0m19:02:25.883671 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017F3C32F290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017F603821B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017F61D416D0>]}
+[0m19:02:25.884294 [debug] [MainThread]: Flushing usage events
+[0m19:02:26.742371 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:11:24.950441 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001709A489D30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017096E66C10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001709B657C50>]}
+
+
+============================== 19:11:24.954637 | 21202160-d5a2-4ba2-8ad0-23c1945a14a8 ==============================
+[0m19:11:24.954637 [info ] [MainThread]: Running with dbt=1.11.10
+[0m19:11:24.955164 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': '.', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt run --profiles-dir .', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\samee\\Documents\\spotify-elt-pipeline\\dbt\\logs'}
+[0m19:11:25.781123 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m19:11:25.781775 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m19:11:25.781990 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m19:11:25.933069 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '21202160-d5a2-4ba2-8ad0-23c1945a14a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001709A969F30>]}
+[0m19:11:25.978676 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '21202160-d5a2-4ba2-8ad0-23c1945a14a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000170BDE0BDF0>]}
+[0m19:11:25.980368 [info ] [MainThread]: Registered adapter: snowflake=1.11.5
+[0m19:11:26.234452 [debug] [MainThread]: checksum: 2f247960199844e016e6a527f21364251736722c6212f4b11e96849fe0fc9e96, vars: {}, profile: , target: , version: 1.11.10
+[0m19:11:26.357351 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 6 files changed.
+[0m19:11:26.358130 [debug] [MainThread]: Partial parsing: updated file: spotify_elt_pipeline://models\staging\schema.yml
+[0m19:11:26.358580 [debug] [MainThread]: Partial parsing: updated file: spotify_elt_pipeline://models\marts\schema.yml
+[0m19:11:26.358789 [debug] [MainThread]: Partial parsing: updated file: spotify_elt_pipeline://models\staging\stg_audio_features.sql
+[0m19:11:26.358960 [debug] [MainThread]: Partial parsing: updated file: spotify_elt_pipeline://models\marts\mart_artist_summary.sql
+[0m19:11:26.359148 [debug] [MainThread]: Partial parsing: updated file: spotify_elt_pipeline://models\marts\mart_top_tracks.sql
+[0m19:11:26.359309 [debug] [MainThread]: Partial parsing: updated file: spotify_elt_pipeline://models\staging\stg_tracks.sql
+[0m19:11:26.691271 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.spotify_elt_pipeline.intermediate
+[0m19:11:26.704037 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '21202160-d5a2-4ba2-8ad0-23c1945a14a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000170BE4CD150>]}
+[0m19:11:26.773402 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\samee\Documents\spotify-elt-pipeline\dbt\target\manifest.json
+[0m19:11:26.775467 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\samee\Documents\spotify-elt-pipeline\dbt\target\semantic_manifest.json
+[0m19:11:26.784767 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '21202160-d5a2-4ba2-8ad0-23c1945a14a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001709AF127B0>]}
+[0m19:11:26.785158 [info ] [MainThread]: Found 5 models, 10 data tests, 3 sources, 528 macros
+[0m19:11:26.785615 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '21202160-d5a2-4ba2-8ad0-23c1945a14a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000170BE761550>]}
+[0m19:11:26.788849 [info ] [MainThread]: 
+[0m19:11:26.789409 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m19:11:26.789733 [info ] [MainThread]: 
+[0m19:11:26.790254 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m19:11:26.795299 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_SPOTIFY_DB'
+[0m19:11:26.854999 [debug] [ThreadPool]: Using snowflake connection "list_SPOTIFY_DB"
+[0m19:11:26.855338 [debug] [ThreadPool]: On list_SPOTIFY_DB: show terse schemas in database SPOTIFY_DB
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.10", "profile_name": "spotify_elt_pipeline", "target_name": "dev", "connection_name": "list_SPOTIFY_DB"} */
+[0m19:11:26.855566 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:11:28.205439 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 1.350 seconds
+[0m19:11:28.209707 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_SPOTIFY_DB_STAGING'
+[0m19:11:28.218930 [debug] [ThreadPool]: Using snowflake connection "list_SPOTIFY_DB_STAGING"
+[0m19:11:28.219303 [debug] [ThreadPool]: On list_SPOTIFY_DB_STAGING: show objects in SPOTIFY_DB.STAGING
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.10", "profile_name": "spotify_elt_pipeline", "target_name": "dev", "connection_name": "list_SPOTIFY_DB_STAGING"} */;
+[0m19:11:28.219523 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:11:29.525889 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 1.306 seconds
+[0m19:11:29.529259 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '21202160-d5a2-4ba2-8ad0-23c1945a14a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000170BEAFD160>]}
+[0m19:11:29.532947 [debug] [Thread-3 (]: Began running node model.spotify_elt_pipeline.stg_audio_features
+[0m19:11:29.533287 [debug] [Thread-4 (]: Began running node model.spotify_elt_pipeline.stg_tracks
+[0m19:11:29.533508 [debug] [Thread-2 (]: Began running node model.spotify_elt_pipeline.stg_artists
+[0m19:11:29.533862 [info ] [Thread-3 (]: 2 of 5 START sql view model STAGING.stg_audio_features ......................... [RUN]
+[0m19:11:29.534837 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.spotify_elt_pipeline.stg_audio_features'
+[0m19:11:29.535213 [debug] [Thread-3 (]: Began compiling node model.spotify_elt_pipeline.stg_audio_features
+[0m19:11:29.542697 [debug] [Thread-3 (]: Writing injected SQL for node "model.spotify_elt_pipeline.stg_audio_features"
+[0m19:11:29.534147 [info ] [Thread-4 (]: 3 of 5 START sql view model STAGING.stg_tracks ................................. [RUN]
+[0m19:11:29.543462 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.spotify_elt_pipeline.stg_tracks'
+[0m19:11:29.534416 [info ] [Thread-2 (]: 1 of 5 START sql view model STAGING.stg_artists ................................ [RUN]
+[0m19:11:29.543932 [debug] [Thread-4 (]: Began compiling node model.spotify_elt_pipeline.stg_tracks
+[0m19:11:29.544402 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.spotify_elt_pipeline.stg_artists'
+[0m19:11:29.547184 [debug] [Thread-4 (]: Writing injected SQL for node "model.spotify_elt_pipeline.stg_tracks"
+[0m19:11:29.547661 [debug] [Thread-3 (]: Began executing node model.spotify_elt_pipeline.stg_audio_features
+[0m19:11:29.547955 [debug] [Thread-2 (]: Began compiling node model.spotify_elt_pipeline.stg_artists
+[0m19:11:29.569466 [debug] [Thread-3 (]: Writing runtime sql for node "model.spotify_elt_pipeline.stg_audio_features"
+[0m19:11:29.572779 [debug] [Thread-2 (]: Writing injected SQL for node "model.spotify_elt_pipeline.stg_artists"
+[0m19:11:29.573502 [debug] [Thread-4 (]: Began executing node model.spotify_elt_pipeline.stg_tracks
+[0m19:11:29.575435 [debug] [Thread-4 (]: Writing runtime sql for node "model.spotify_elt_pipeline.stg_tracks"
+[0m19:11:29.576263 [debug] [Thread-3 (]: Using snowflake connection "model.spotify_elt_pipeline.stg_audio_features"
+[0m19:11:29.576577 [debug] [Thread-3 (]: On model.spotify_elt_pipeline.stg_audio_features: create or replace   view SPOTIFY_DB.STAGING.stg_audio_features
+  
+  
+  
+  
+  as (
+    WITH ranked AS (
+    SELECT
+        track_id,
+        duration_ms,
+        explicit AS is_explicit,
+        _loaded_at,
+        ROW_NUMBER() OVER (PARTITION BY track_id ORDER BY _loaded_at DESC) AS rn
+    FROM SPOTIFY_DB.RAW.v_audio_features
+    WHERE track_id IS NOT NULL
+)
+
+SELECT
+    track_id,
+    duration_ms,
+    is_explicit,
+    _loaded_at
+FROM ranked
+WHERE rn = 1
+  )
+/* {"app": "dbt", "dbt_version": "1.11.10", "profile_name": "spotify_elt_pipeline", "target_name": "dev", "node_id": "model.spotify_elt_pipeline.stg_audio_features"} */;
+[0m19:11:29.576855 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m19:11:29.577152 [debug] [Thread-2 (]: Began executing node model.spotify_elt_pipeline.stg_artists
+[0m19:11:29.579134 [debug] [Thread-2 (]: Writing runtime sql for node "model.spotify_elt_pipeline.stg_artists"
+[0m19:11:29.580604 [debug] [Thread-4 (]: Using snowflake connection "model.spotify_elt_pipeline.stg_tracks"
+[0m19:11:29.580946 [debug] [Thread-4 (]: On model.spotify_elt_pipeline.stg_tracks: create or replace   view SPOTIFY_DB.STAGING.stg_tracks
+  
+  
+  
+  
+  as (
+    WITH ranked AS (
+    SELECT
+        track_id,
+        track_name,
+        duration_ms,
+        ROUND(duration_ms / 60000.0, 2) AS duration_minutes,
+        explicit AS is_explicit,
+        album_id,
+        album_name,
+        primary_artist_id,
+        primary_artist_name,
+        _loaded_at,
+        ROW_NUMBER() OVER (PARTITION BY track_id ORDER BY _loaded_at DESC) AS rn
+    FROM SPOTIFY_DB.RAW.v_tracks
+    WHERE track_id IS NOT NULL
+)
+
+SELECT
+    track_id,
+    track_name,
+    duration_ms,
+    duration_minutes,
+    is_explicit,
+    album_id,
+    album_name,
+    primary_artist_id,
+    primary_artist_name,
+    _loaded_at
+FROM ranked
+WHERE rn = 1
+  )
+/* {"app": "dbt", "dbt_version": "1.11.10", "profile_name": "spotify_elt_pipeline", "target_name": "dev", "node_id": "model.spotify_elt_pipeline.stg_tracks"} */;
+[0m19:11:29.581210 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m19:11:29.581932 [debug] [Thread-2 (]: Using snowflake connection "model.spotify_elt_pipeline.stg_artists"
+[0m19:11:29.582546 [debug] [Thread-2 (]: On model.spotify_elt_pipeline.stg_artists: create or replace   view SPOTIFY_DB.STAGING.stg_artists
+  
+  
+  
+  
+  as (
+    WITH ranked AS (
+    SELECT
+        artist_id,
+        artist_name,
+        _loaded_at,
+        ROW_NUMBER() OVER (PARTITION BY artist_id ORDER BY _loaded_at DESC) AS rn
+    FROM SPOTIFY_DB.RAW.v_artists
+    WHERE artist_id IS NOT NULL
+)
+
+SELECT
+    artist_id,
+    artist_name,
+    _loaded_at
+FROM ranked
+WHERE rn = 1
+  )
+/* {"app": "dbt", "dbt_version": "1.11.10", "profile_name": "spotify_elt_pipeline", "target_name": "dev", "node_id": "model.spotify_elt_pipeline.stg_artists"} */;
+[0m19:11:29.582884 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m19:11:30.060087 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.483 seconds
+[0m19:11:30.078719 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '21202160-d5a2-4ba2-8ad0-23c1945a14a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000170BFD4E090>]}
+[0m19:11:30.079306 [info ] [Thread-3 (]: 2 of 5 OK created sql view model STAGING.stg_audio_features .................... [[32mSUCCESS 1[0m in 0.54s]
+[0m19:11:30.079889 [debug] [Thread-3 (]: Finished running node model.spotify_elt_pipeline.stg_audio_features
+[0m19:11:30.108831 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.526 seconds
+[0m19:11:30.111292 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '21202160-d5a2-4ba2-8ad0-23c1945a14a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000170BE831D30>]}
+[0m19:11:30.111866 [info ] [Thread-2 (]: 1 of 5 OK created sql view model STAGING.stg_artists ........................... [[32mSUCCESS 1[0m in 0.57s]
+[0m19:11:30.112607 [debug] [Thread-2 (]: Finished running node model.spotify_elt_pipeline.stg_artists
+[0m19:11:30.770811 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 1.189 seconds
+[0m19:11:30.772857 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '21202160-d5a2-4ba2-8ad0-23c1945a14a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000170BFE49EF0>]}
+[0m19:11:30.773404 [info ] [Thread-4 (]: 3 of 5 OK created sql view model STAGING.stg_tracks ............................ [[32mSUCCESS 1[0m in 1.23s]
+[0m19:11:30.774298 [debug] [Thread-4 (]: Finished running node model.spotify_elt_pipeline.stg_tracks
+[0m19:11:30.775003 [debug] [Thread-5 (]: Began running node model.spotify_elt_pipeline.mart_artist_summary
+[0m19:11:30.776753 [debug] [Thread-3 (]: Began running node model.spotify_elt_pipeline.mart_top_tracks
+[0m19:11:30.777129 [info ] [Thread-5 (]: 4 of 5 START sql table model STAGING.mart_artist_summary ....................... [RUN]
+[0m19:11:30.778000 [debug] [Thread-5 (]: Acquiring new snowflake connection 'model.spotify_elt_pipeline.mart_artist_summary'
+[0m19:11:30.777606 [info ] [Thread-3 (]: 5 of 5 START sql table model STAGING.mart_top_tracks ........................... [RUN]
+[0m19:11:30.778332 [debug] [Thread-5 (]: Began compiling node model.spotify_elt_pipeline.mart_artist_summary
+[0m19:11:30.778582 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.spotify_elt_pipeline.stg_audio_features, now model.spotify_elt_pipeline.mart_top_tracks)
+[0m19:11:30.782067 [debug] [Thread-5 (]: Writing injected SQL for node "model.spotify_elt_pipeline.mart_artist_summary"
+[0m19:11:30.782453 [debug] [Thread-3 (]: Began compiling node model.spotify_elt_pipeline.mart_top_tracks
+[0m19:11:30.792479 [debug] [Thread-3 (]: Writing injected SQL for node "model.spotify_elt_pipeline.mart_top_tracks"
+[0m19:11:30.793653 [debug] [Thread-5 (]: Began executing node model.spotify_elt_pipeline.mart_artist_summary
+[0m19:11:30.793981 [debug] [Thread-3 (]: Began executing node model.spotify_elt_pipeline.mart_top_tracks
+[0m19:11:30.812363 [debug] [Thread-5 (]: Writing runtime sql for node "model.spotify_elt_pipeline.mart_artist_summary"
+[0m19:11:30.815039 [debug] [Thread-3 (]: Writing runtime sql for node "model.spotify_elt_pipeline.mart_top_tracks"
+[0m19:11:30.816598 [debug] [Thread-5 (]: Using snowflake connection "model.spotify_elt_pipeline.mart_artist_summary"
+[0m19:11:30.817362 [debug] [Thread-3 (]: Using snowflake connection "model.spotify_elt_pipeline.mart_top_tracks"
+[0m19:11:30.817660 [debug] [Thread-5 (]: On model.spotify_elt_pipeline.mart_artist_summary: create or replace transient table SPOTIFY_DB.STAGING.mart_artist_summary
+    
+    
+    
+    as (
+
+SELECT
+    primary_artist_id                  AS artist_id,
+    primary_artist_name                AS artist_name,
+    COUNT(*)                           AS track_count,
+    AVG(duration_minutes)              AS avg_duration_minutes,
+    SUM(CAST(is_explicit AS INT))      AS total_explicit_tracks
+FROM SPOTIFY_DB.STAGING.stg_tracks
+WHERE primary_artist_id IS NOT NULL
+GROUP BY primary_artist_id, primary_artist_name
+    )
+
+/* {"app": "dbt", "dbt_version": "1.11.10", "profile_name": "spotify_elt_pipeline", "target_name": "dev", "node_id": "model.spotify_elt_pipeline.mart_artist_summary"} */;
+[0m19:11:30.817929 [debug] [Thread-3 (]: On model.spotify_elt_pipeline.mart_top_tracks: create or replace transient table SPOTIFY_DB.STAGING.mart_top_tracks
+    
+    
+    
+    as (
+
+SELECT
+    t.track_id,
+    t.track_name,
+    t.duration_ms,
+    t.duration_minutes,
+    CAST(t.is_explicit AS BOOLEAN) AS is_explicit,
+    t.album_id,
+    t.album_name,
+    ROUND(
+        CASE WHEN t.is_explicit THEN 0.3 ELSE 0.7 END
+        + (t.duration_ms / 1000000.0),
+        4
+    ) AS mood_score,
+    CASE
+        WHEN t.is_explicit = TRUE                                THEN 'Explicit Track'
+        WHEN t.is_explicit = FALSE AND t.duration_minutes > 3.5  THEN 'Clean Track'
+        ELSE 'Short Clean'
+    END AS audio_profile,
+    t._loaded_at
+FROM SPOTIFY_DB.STAGING.stg_tracks t
+JOIN SPOTIFY_DB.STAGING.stg_audio_features af
+    ON t.track_id = af.track_id
+    )
+
+/* {"app": "dbt", "dbt_version": "1.11.10", "profile_name": "spotify_elt_pipeline", "target_name": "dev", "node_id": "model.spotify_elt_pipeline.mart_top_tracks"} */;
+[0m19:11:30.818157 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m19:11:31.958177 [debug] [Thread-3 (]: SQL status: SUCCESS 50 in 1.140 seconds
+[0m19:11:31.959956 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '21202160-d5a2-4ba2-8ad0-23c1945a14a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000170BE75D750>]}
+[0m19:11:31.960431 [info ] [Thread-3 (]: 5 of 5 OK created sql table model STAGING.mart_top_tracks ...................... [[32mSUCCESS 50[0m in 1.18s]
+[0m19:11:31.960993 [debug] [Thread-3 (]: Finished running node model.spotify_elt_pipeline.mart_top_tracks
+[0m19:11:32.222033 [debug] [Thread-5 (]: SQL status: SUCCESS 34 in 1.404 seconds
+[0m19:11:32.223887 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '21202160-d5a2-4ba2-8ad0-23c1945a14a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000170BFDA2A50>]}
+[0m19:11:32.224347 [info ] [Thread-5 (]: 4 of 5 OK created sql table model STAGING.mart_artist_summary .................. [[32mSUCCESS 34[0m in 1.45s]
+[0m19:11:32.224899 [debug] [Thread-5 (]: Finished running node model.spotify_elt_pipeline.mart_artist_summary
+[0m19:11:32.227696 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:11:32.227909 [debug] [MainThread]: Connection 'list_SPOTIFY_DB' was left open.
+[0m19:11:32.228080 [debug] [MainThread]: On list_SPOTIFY_DB: Close
+[0m19:11:32.348807 [debug] [MainThread]: Connection 'list_SPOTIFY_DB_STAGING' was left open.
+[0m19:11:32.349160 [debug] [MainThread]: On list_SPOTIFY_DB_STAGING: Close
+[0m19:11:32.495331 [debug] [MainThread]: Connection 'model.spotify_elt_pipeline.mart_top_tracks' was left open.
+[0m19:11:32.495714 [debug] [MainThread]: On model.spotify_elt_pipeline.mart_top_tracks: Close
+[0m19:11:33.273579 [debug] [MainThread]: Connection 'model.spotify_elt_pipeline.stg_tracks' was left open.
+[0m19:11:33.274126 [debug] [MainThread]: On model.spotify_elt_pipeline.stg_tracks: Close
+[0m19:11:33.505746 [debug] [MainThread]: Connection 'model.spotify_elt_pipeline.stg_artists' was left open.
+[0m19:11:33.506108 [debug] [MainThread]: On model.spotify_elt_pipeline.stg_artists: Close
+[0m19:11:33.659015 [debug] [MainThread]: Connection 'model.spotify_elt_pipeline.mart_artist_summary' was left open.
+[0m19:11:33.659377 [debug] [MainThread]: On model.spotify_elt_pipeline.mart_artist_summary: Close
+[0m19:11:33.774596 [info ] [MainThread]: 
+[0m19:11:33.775572 [info ] [MainThread]: Finished running 2 table models, 3 view models in 0 hours 0 minutes and 6.98 seconds (6.98s).
+[0m19:11:33.778231 [debug] [MainThread]: Command end result
+[0m19:11:33.804005 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\samee\Documents\spotify-elt-pipeline\dbt\target\manifest.json
+[0m19:11:33.806467 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\samee\Documents\spotify-elt-pipeline\dbt\target\semantic_manifest.json
+[0m19:11:33.810879 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\samee\Documents\spotify-elt-pipeline\dbt\target\run_results.json
+[0m19:11:33.811186 [info ] [MainThread]: 
+[0m19:11:33.811701 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m19:11:33.812115 [info ] [MainThread]: 
+[0m19:11:33.812440 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=5
+[0m19:11:33.813125 [debug] [MainThread]: Command `dbt run` succeeded at 19:11:33.813041 after 8.99 seconds
+[0m19:11:33.813387 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001709AF84AD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000170BFE08C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000170BFE01FD0>]}
+[0m19:11:33.813683 [debug] [MainThread]: Flushing usage events
+[0m19:11:34.276489 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:11:45.952873 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023488309D30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023484D06C10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234894D7C50>]}
+
+
+============================== 19:11:45.956968 | 9b8c3325-b037-42cd-aaa1-476bfe751251 ==============================
+[0m19:11:45.956968 [info ] [MainThread]: Running with dbt=1.11.10
+[0m19:11:45.957546 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': '.', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt test --profiles-dir .', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\samee\\Documents\\spotify-elt-pipeline\\dbt\\logs'}
+[0m19:11:46.767498 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m19:11:46.767886 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m19:11:46.768072 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m19:11:46.918736 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9b8c3325-b037-42cd-aaa1-476bfe751251', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234887E9F30>]}
+[0m19:11:46.966683 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9b8c3325-b037-42cd-aaa1-476bfe751251', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234ABC4BDF0>]}
+[0m19:11:46.967972 [info ] [MainThread]: Registered adapter: snowflake=1.11.5
+[0m19:11:47.218756 [debug] [MainThread]: checksum: 2f247960199844e016e6a527f21364251736722c6212f4b11e96849fe0fc9e96, vars: {}, profile: , target: , version: 1.11.10
+[0m19:11:47.334976 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m19:11:47.335360 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m19:11:47.335553 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m19:11:47.339676 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.spotify_elt_pipeline.intermediate
+[0m19:11:47.372769 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9b8c3325-b037-42cd-aaa1-476bfe751251', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234AC0B4250>]}
+[0m19:11:47.441298 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\samee\Documents\spotify-elt-pipeline\dbt\target\manifest.json
+[0m19:11:47.444067 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\samee\Documents\spotify-elt-pipeline\dbt\target\semantic_manifest.json
+[0m19:11:47.465670 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9b8c3325-b037-42cd-aaa1-476bfe751251', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234AC3B26C0>]}
+[0m19:11:47.466105 [info ] [MainThread]: Found 5 models, 10 data tests, 3 sources, 528 macros
+[0m19:11:47.466423 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9b8c3325-b037-42cd-aaa1-476bfe751251', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234AC3CACF0>]}
+[0m19:11:47.470137 [info ] [MainThread]: 
+[0m19:11:47.470724 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m19:11:47.471070 [info ] [MainThread]: 
+[0m19:11:47.471897 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m19:11:47.476145 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_SPOTIFY_DB_STAGING'
+[0m19:11:47.532801 [debug] [ThreadPool]: Using snowflake connection "list_SPOTIFY_DB_STAGING"
+[0m19:11:47.533144 [debug] [ThreadPool]: On list_SPOTIFY_DB_STAGING: show objects in SPOTIFY_DB.STAGING
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.10", "profile_name": "spotify_elt_pipeline", "target_name": "dev", "connection_name": "list_SPOTIFY_DB_STAGING"} */;
+[0m19:11:47.533319 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:11:48.803063 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 1.270 seconds
+[0m19:11:48.805848 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9b8c3325-b037-42cd-aaa1-476bfe751251', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234AC3EBEE0>]}
+[0m19:11:48.810558 [debug] [Thread-5 (]: Began running node test.spotify_elt_pipeline.not_null_stg_audio_features_track_id.1f1fb9a6a0
+[0m19:11:48.810887 [debug] [Thread-4 (]: Began running node test.spotify_elt_pipeline.not_null_stg_artists_artist_id.baea7764a7
+[0m19:11:48.811149 [debug] [Thread-2 (]: Began running node test.spotify_elt_pipeline.not_null_mart_artist_summary_artist_id.7fea407d8e
+[0m19:11:48.811362 [debug] [Thread-3 (]: Began running node test.spotify_elt_pipeline.not_null_mart_top_tracks_track_id.bba0ad5b78
+[0m19:11:48.811598 [info ] [Thread-5 (]: 4 of 10 START test not_null_stg_audio_features_track_id ........................ [RUN]
+[0m19:11:48.811826 [info ] [Thread-4 (]: 3 of 10 START test not_null_stg_artists_artist_id .............................. [RUN]
+[0m19:11:48.813097 [debug] [Thread-5 (]: Acquiring new snowflake connection 'test.spotify_elt_pipeline.not_null_stg_audio_features_track_id.1f1fb9a6a0'
+[0m19:11:48.812104 [info ] [Thread-2 (]: 1 of 10 START test not_null_mart_artist_summary_artist_id ...................... [RUN]
+[0m19:11:48.815195 [debug] [Thread-4 (]: Acquiring new snowflake connection 'test.spotify_elt_pipeline.not_null_stg_artists_artist_id.baea7764a7'
+[0m19:11:48.815547 [debug] [Thread-5 (]: Began compiling node test.spotify_elt_pipeline.not_null_stg_audio_features_track_id.1f1fb9a6a0
+[0m19:11:48.812430 [info ] [Thread-3 (]: 2 of 10 START test not_null_mart_top_tracks_track_id ........................... [RUN]
+[0m19:11:48.815940 [debug] [Thread-2 (]: Acquiring new snowflake connection 'test.spotify_elt_pipeline.not_null_mart_artist_summary_artist_id.7fea407d8e'
+[0m19:11:48.816182 [debug] [Thread-4 (]: Began compiling node test.spotify_elt_pipeline.not_null_stg_artists_artist_id.baea7764a7
+[0m19:11:48.829669 [debug] [Thread-5 (]: Writing injected SQL for node "test.spotify_elt_pipeline.not_null_stg_audio_features_track_id.1f1fb9a6a0"
+[0m19:11:48.830173 [debug] [Thread-3 (]: Acquiring new snowflake connection 'test.spotify_elt_pipeline.not_null_mart_top_tracks_track_id.bba0ad5b78'
+[0m19:11:48.830507 [debug] [Thread-2 (]: Began compiling node test.spotify_elt_pipeline.not_null_mart_artist_summary_artist_id.7fea407d8e
+[0m19:11:48.833667 [debug] [Thread-4 (]: Writing injected SQL for node "test.spotify_elt_pipeline.not_null_stg_artists_artist_id.baea7764a7"
+[0m19:11:48.834067 [debug] [Thread-3 (]: Began compiling node test.spotify_elt_pipeline.not_null_mart_top_tracks_track_id.bba0ad5b78
+[0m19:11:48.837015 [debug] [Thread-2 (]: Writing injected SQL for node "test.spotify_elt_pipeline.not_null_mart_artist_summary_artist_id.7fea407d8e"
+[0m19:11:48.840936 [debug] [Thread-3 (]: Writing injected SQL for node "test.spotify_elt_pipeline.not_null_mart_top_tracks_track_id.bba0ad5b78"
+[0m19:11:48.841544 [debug] [Thread-5 (]: Began executing node test.spotify_elt_pipeline.not_null_stg_audio_features_track_id.1f1fb9a6a0
+[0m19:11:48.859777 [debug] [Thread-4 (]: Began executing node test.spotify_elt_pipeline.not_null_stg_artists_artist_id.baea7764a7
+[0m19:11:48.862000 [debug] [Thread-4 (]: Writing runtime sql for node "test.spotify_elt_pipeline.not_null_stg_artists_artist_id.baea7764a7"
+[0m19:11:48.859345 [debug] [Thread-5 (]: Writing runtime sql for node "test.spotify_elt_pipeline.not_null_stg_audio_features_track_id.1f1fb9a6a0"
+[0m19:11:48.862677 [debug] [Thread-2 (]: Began executing node test.spotify_elt_pipeline.not_null_mart_artist_summary_artist_id.7fea407d8e
+[0m19:11:48.867628 [debug] [Thread-2 (]: Writing runtime sql for node "test.spotify_elt_pipeline.not_null_mart_artist_summary_artist_id.7fea407d8e"
+[0m19:11:48.868662 [debug] [Thread-3 (]: Began executing node test.spotify_elt_pipeline.not_null_mart_top_tracks_track_id.bba0ad5b78
+[0m19:11:48.875139 [debug] [Thread-3 (]: Writing runtime sql for node "test.spotify_elt_pipeline.not_null_mart_top_tracks_track_id.bba0ad5b78"
+[0m19:11:48.876152 [debug] [Thread-4 (]: Using snowflake connection "test.spotify_elt_pipeline.not_null_stg_artists_artist_id.baea7764a7"
+[0m19:11:48.876761 [debug] [Thread-5 (]: Using snowflake connection "test.spotify_elt_pipeline.not_null_stg_audio_features_track_id.1f1fb9a6a0"
+[0m19:11:48.877150 [debug] [Thread-4 (]: On test.spotify_elt_pipeline.not_null_stg_artists_artist_id.baea7764a7: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select artist_id
+from SPOTIFY_DB.STAGING.stg_artists
+where artist_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.10", "profile_name": "spotify_elt_pipeline", "target_name": "dev", "node_id": "test.spotify_elt_pipeline.not_null_stg_artists_artist_id.baea7764a7"} */
+[0m19:11:48.877684 [debug] [Thread-2 (]: Using snowflake connection "test.spotify_elt_pipeline.not_null_mart_artist_summary_artist_id.7fea407d8e"
+[0m19:11:48.878001 [debug] [Thread-5 (]: On test.spotify_elt_pipeline.not_null_stg_audio_features_track_id.1f1fb9a6a0: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select track_id
+from SPOTIFY_DB.STAGING.stg_audio_features
+where track_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.10", "profile_name": "spotify_elt_pipeline", "target_name": "dev", "node_id": "test.spotify_elt_pipeline.not_null_stg_audio_features_track_id.1f1fb9a6a0"} */
+[0m19:11:48.878340 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m19:11:48.879001 [debug] [Thread-3 (]: Using snowflake connection "test.spotify_elt_pipeline.not_null_mart_top_tracks_track_id.bba0ad5b78"
+[0m19:11:48.879589 [debug] [Thread-2 (]: On test.spotify_elt_pipeline.not_null_mart_artist_summary_artist_id.7fea407d8e: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select artist_id
+from SPOTIFY_DB.STAGING.mart_artist_summary
+where artist_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.10", "profile_name": "spotify_elt_pipeline", "target_name": "dev", "node_id": "test.spotify_elt_pipeline.not_null_mart_artist_summary_artist_id.7fea407d8e"} */
+[0m19:11:48.880115 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m19:11:48.880729 [debug] [Thread-3 (]: On test.spotify_elt_pipeline.not_null_mart_top_tracks_track_id.bba0ad5b78: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select track_id
+from SPOTIFY_DB.STAGING.mart_top_tracks
+where track_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.10", "profile_name": "spotify_elt_pipeline", "target_name": "dev", "node_id": "test.spotify_elt_pipeline.not_null_mart_top_tracks_track_id.bba0ad5b78"} */
+[0m19:11:48.881316 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m19:11:48.881986 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m19:11:50.135254 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 1.257 seconds
+[0m19:11:50.143496 [info ] [Thread-4 (]: 3 of 10 PASS not_null_stg_artists_artist_id .................................... [[32mPASS[0m in 1.33s]
+[0m19:11:50.144386 [debug] [Thread-4 (]: Finished running node test.spotify_elt_pipeline.not_null_stg_artists_artist_id.baea7764a7
+[0m19:11:50.144727 [debug] [Thread-4 (]: Began running node test.spotify_elt_pipeline.not_null_stg_tracks_track_id.692df9de6a
+[0m19:11:50.145294 [info ] [Thread-4 (]: 5 of 10 START test not_null_stg_tracks_track_id ................................ [RUN]
+[0m19:11:50.147591 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.spotify_elt_pipeline.not_null_stg_artists_artist_id.baea7764a7, now test.spotify_elt_pipeline.not_null_stg_tracks_track_id.692df9de6a)
+[0m19:11:50.147923 [debug] [Thread-4 (]: Began compiling node test.spotify_elt_pipeline.not_null_stg_tracks_track_id.692df9de6a
+[0m19:11:50.154537 [debug] [Thread-4 (]: Writing injected SQL for node "test.spotify_elt_pipeline.not_null_stg_tracks_track_id.692df9de6a"
+[0m19:11:50.155568 [debug] [Thread-4 (]: Began executing node test.spotify_elt_pipeline.not_null_stg_tracks_track_id.692df9de6a
+[0m19:11:50.161575 [debug] [Thread-4 (]: Writing runtime sql for node "test.spotify_elt_pipeline.not_null_stg_tracks_track_id.692df9de6a"
+[0m19:11:50.162920 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 1.281 seconds
+[0m19:11:50.164819 [info ] [Thread-3 (]: 2 of 10 PASS not_null_mart_top_tracks_track_id ................................. [[32mPASS[0m in 1.33s]
+[0m19:11:50.165473 [debug] [Thread-3 (]: Finished running node test.spotify_elt_pipeline.not_null_mart_top_tracks_track_id.bba0ad5b78
+[0m19:11:50.166007 [debug] [Thread-4 (]: Using snowflake connection "test.spotify_elt_pipeline.not_null_stg_tracks_track_id.692df9de6a"
+[0m19:11:50.166312 [debug] [Thread-3 (]: Began running node test.spotify_elt_pipeline.unique_mart_artist_summary_artist_id.138cf40dc3
+[0m19:11:50.166625 [debug] [Thread-4 (]: On test.spotify_elt_pipeline.not_null_stg_tracks_track_id.692df9de6a: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select track_id
+from SPOTIFY_DB.STAGING.stg_tracks
+where track_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.10", "profile_name": "spotify_elt_pipeline", "target_name": "dev", "node_id": "test.spotify_elt_pipeline.not_null_stg_tracks_track_id.692df9de6a"} */
+[0m19:11:50.166891 [info ] [Thread-3 (]: 6 of 10 START test unique_mart_artist_summary_artist_id ........................ [RUN]
+[0m19:11:50.167538 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.spotify_elt_pipeline.not_null_mart_top_tracks_track_id.bba0ad5b78, now test.spotify_elt_pipeline.unique_mart_artist_summary_artist_id.138cf40dc3)
+[0m19:11:50.167787 [debug] [Thread-3 (]: Began compiling node test.spotify_elt_pipeline.unique_mart_artist_summary_artist_id.138cf40dc3
+[0m19:11:50.172758 [debug] [Thread-3 (]: Writing injected SQL for node "test.spotify_elt_pipeline.unique_mart_artist_summary_artist_id.138cf40dc3"
+[0m19:11:50.174656 [debug] [Thread-3 (]: Began executing node test.spotify_elt_pipeline.unique_mart_artist_summary_artist_id.138cf40dc3
+[0m19:11:50.177779 [debug] [Thread-3 (]: Writing runtime sql for node "test.spotify_elt_pipeline.unique_mart_artist_summary_artist_id.138cf40dc3"
+[0m19:11:50.179211 [debug] [Thread-3 (]: Using snowflake connection "test.spotify_elt_pipeline.unique_mart_artist_summary_artist_id.138cf40dc3"
+[0m19:11:50.179514 [debug] [Thread-3 (]: On test.spotify_elt_pipeline.unique_mart_artist_summary_artist_id.138cf40dc3: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    artist_id as unique_field,
+    count(*) as n_records
+
+from SPOTIFY_DB.STAGING.mart_artist_summary
+where artist_id is not null
+group by artist_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.10", "profile_name": "spotify_elt_pipeline", "target_name": "dev", "node_id": "test.spotify_elt_pipeline.unique_mart_artist_summary_artist_id.138cf40dc3"} */
+[0m19:11:50.198878 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 1.319 seconds
+[0m19:11:50.201362 [info ] [Thread-5 (]: 4 of 10 PASS not_null_stg_audio_features_track_id .............................. [[32mPASS[0m in 1.39s]
+[0m19:11:50.201943 [debug] [Thread-5 (]: Finished running node test.spotify_elt_pipeline.not_null_stg_audio_features_track_id.1f1fb9a6a0
+[0m19:11:50.202209 [debug] [Thread-5 (]: Began running node test.spotify_elt_pipeline.unique_mart_top_tracks_track_id.6e86591c78
+[0m19:11:50.202484 [info ] [Thread-5 (]: 7 of 10 START test unique_mart_top_tracks_track_id ............................. [RUN]
+[0m19:11:50.202942 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.spotify_elt_pipeline.not_null_stg_audio_features_track_id.1f1fb9a6a0, now test.spotify_elt_pipeline.unique_mart_top_tracks_track_id.6e86591c78)
+[0m19:11:50.203174 [debug] [Thread-5 (]: Began compiling node test.spotify_elt_pipeline.unique_mart_top_tracks_track_id.6e86591c78
+[0m19:11:50.207144 [debug] [Thread-5 (]: Writing injected SQL for node "test.spotify_elt_pipeline.unique_mart_top_tracks_track_id.6e86591c78"
+[0m19:11:50.208095 [debug] [Thread-5 (]: Began executing node test.spotify_elt_pipeline.unique_mart_top_tracks_track_id.6e86591c78
+[0m19:11:50.210308 [debug] [Thread-5 (]: Writing runtime sql for node "test.spotify_elt_pipeline.unique_mart_top_tracks_track_id.6e86591c78"
+[0m19:11:50.211408 [debug] [Thread-5 (]: Using snowflake connection "test.spotify_elt_pipeline.unique_mart_top_tracks_track_id.6e86591c78"
+[0m19:11:50.211720 [debug] [Thread-5 (]: On test.spotify_elt_pipeline.unique_mart_top_tracks_track_id.6e86591c78: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    track_id as unique_field,
+    count(*) as n_records
+
+from SPOTIFY_DB.STAGING.mart_top_tracks
+where track_id is not null
+group by track_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.10", "profile_name": "spotify_elt_pipeline", "target_name": "dev", "node_id": "test.spotify_elt_pipeline.unique_mart_top_tracks_track_id.6e86591c78"} */
+[0m19:11:50.375061 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.208 seconds
+[0m19:11:50.376860 [info ] [Thread-4 (]: 5 of 10 PASS not_null_stg_tracks_track_id ...................................... [[32mPASS[0m in 0.23s]
+[0m19:11:50.377552 [debug] [Thread-4 (]: Finished running node test.spotify_elt_pipeline.not_null_stg_tracks_track_id.692df9de6a
+[0m19:11:50.377861 [debug] [Thread-4 (]: Began running node test.spotify_elt_pipeline.unique_stg_artists_artist_id.9f88e38d1f
+[0m19:11:50.379498 [info ] [Thread-4 (]: 8 of 10 START test unique_stg_artists_artist_id ................................ [RUN]
+[0m19:11:50.380127 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.spotify_elt_pipeline.not_null_stg_tracks_track_id.692df9de6a, now test.spotify_elt_pipeline.unique_stg_artists_artist_id.9f88e38d1f)
+[0m19:11:50.380405 [debug] [Thread-4 (]: Began compiling node test.spotify_elt_pipeline.unique_stg_artists_artist_id.9f88e38d1f
+[0m19:11:50.383523 [debug] [Thread-4 (]: Writing injected SQL for node "test.spotify_elt_pipeline.unique_stg_artists_artist_id.9f88e38d1f"
+[0m19:11:50.384605 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 0.173 seconds
+[0m19:11:50.386031 [info ] [Thread-5 (]: 7 of 10 PASS unique_mart_top_tracks_track_id ................................... [[32mPASS[0m in 0.18s]
+[0m19:11:50.386585 [debug] [Thread-5 (]: Finished running node test.spotify_elt_pipeline.unique_mart_top_tracks_track_id.6e86591c78
+[0m19:11:50.386899 [debug] [Thread-4 (]: Began executing node test.spotify_elt_pipeline.unique_stg_artists_artist_id.9f88e38d1f
+[0m19:11:50.387190 [debug] [Thread-5 (]: Began running node test.spotify_elt_pipeline.unique_stg_audio_features_track_id.17c1cb4cfe
+[0m19:11:50.389455 [debug] [Thread-4 (]: Writing runtime sql for node "test.spotify_elt_pipeline.unique_stg_artists_artist_id.9f88e38d1f"
+[0m19:11:50.389756 [info ] [Thread-5 (]: 9 of 10 START test unique_stg_audio_features_track_id .......................... [RUN]
+[0m19:11:50.390163 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.spotify_elt_pipeline.unique_mart_top_tracks_track_id.6e86591c78, now test.spotify_elt_pipeline.unique_stg_audio_features_track_id.17c1cb4cfe)
+[0m19:11:50.390416 [debug] [Thread-5 (]: Began compiling node test.spotify_elt_pipeline.unique_stg_audio_features_track_id.17c1cb4cfe
+[0m19:11:50.393074 [debug] [Thread-5 (]: Writing injected SQL for node "test.spotify_elt_pipeline.unique_stg_audio_features_track_id.17c1cb4cfe"
+[0m19:11:50.394131 [debug] [Thread-4 (]: Using snowflake connection "test.spotify_elt_pipeline.unique_stg_artists_artist_id.9f88e38d1f"
+[0m19:11:50.394427 [debug] [Thread-4 (]: On test.spotify_elt_pipeline.unique_stg_artists_artist_id.9f88e38d1f: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    artist_id as unique_field,
+    count(*) as n_records
+
+from SPOTIFY_DB.STAGING.stg_artists
+where artist_id is not null
+group by artist_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.10", "profile_name": "spotify_elt_pipeline", "target_name": "dev", "node_id": "test.spotify_elt_pipeline.unique_stg_artists_artist_id.9f88e38d1f"} */
+[0m19:11:50.395553 [debug] [Thread-5 (]: Began executing node test.spotify_elt_pipeline.unique_stg_audio_features_track_id.17c1cb4cfe
+[0m19:11:50.398056 [debug] [Thread-5 (]: Writing runtime sql for node "test.spotify_elt_pipeline.unique_stg_audio_features_track_id.17c1cb4cfe"
+[0m19:11:50.399293 [debug] [Thread-5 (]: Using snowflake connection "test.spotify_elt_pipeline.unique_stg_audio_features_track_id.17c1cb4cfe"
+[0m19:11:50.399551 [debug] [Thread-5 (]: On test.spotify_elt_pipeline.unique_stg_audio_features_track_id.17c1cb4cfe: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    track_id as unique_field,
+    count(*) as n_records
+
+from SPOTIFY_DB.STAGING.stg_audio_features
+where track_id is not null
+group by track_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.10", "profile_name": "spotify_elt_pipeline", "target_name": "dev", "node_id": "test.spotify_elt_pipeline.unique_stg_audio_features_track_id.17c1cb4cfe"} */
+[0m19:11:50.434631 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.255 seconds
+[0m19:11:50.437193 [info ] [Thread-3 (]: 6 of 10 PASS unique_mart_artist_summary_artist_id .............................. [[32mPASS[0m in 0.27s]
+[0m19:11:50.437857 [debug] [Thread-3 (]: Finished running node test.spotify_elt_pipeline.unique_mart_artist_summary_artist_id.138cf40dc3
+[0m19:11:50.438160 [debug] [Thread-3 (]: Began running node test.spotify_elt_pipeline.unique_stg_tracks_track_id.29686655df
+[0m19:11:50.438455 [info ] [Thread-3 (]: 10 of 10 START test unique_stg_tracks_track_id ................................. [RUN]
+[0m19:11:50.438952 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.spotify_elt_pipeline.unique_mart_artist_summary_artist_id.138cf40dc3, now test.spotify_elt_pipeline.unique_stg_tracks_track_id.29686655df)
+[0m19:11:50.439184 [debug] [Thread-3 (]: Began compiling node test.spotify_elt_pipeline.unique_stg_tracks_track_id.29686655df
+[0m19:11:50.442425 [debug] [Thread-3 (]: Writing injected SQL for node "test.spotify_elt_pipeline.unique_stg_tracks_track_id.29686655df"
+[0m19:11:50.443314 [debug] [Thread-3 (]: Began executing node test.spotify_elt_pipeline.unique_stg_tracks_track_id.29686655df
+[0m19:11:50.445046 [debug] [Thread-3 (]: Writing runtime sql for node "test.spotify_elt_pipeline.unique_stg_tracks_track_id.29686655df"
+[0m19:11:50.446144 [debug] [Thread-3 (]: Using snowflake connection "test.spotify_elt_pipeline.unique_stg_tracks_track_id.29686655df"
+[0m19:11:50.446522 [debug] [Thread-3 (]: On test.spotify_elt_pipeline.unique_stg_tracks_track_id.29686655df: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    track_id as unique_field,
+    count(*) as n_records
+
+from SPOTIFY_DB.STAGING.stg_tracks
+where track_id is not null
+group by track_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.10", "profile_name": "spotify_elt_pipeline", "target_name": "dev", "node_id": "test.spotify_elt_pipeline.unique_stg_tracks_track_id.29686655df"} */
+[0m19:11:50.523488 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.642 seconds
+[0m19:11:50.525076 [info ] [Thread-2 (]: 1 of 10 PASS not_null_mart_artist_summary_artist_id ............................ [[32mPASS[0m in 1.71s]
+[0m19:11:50.525719 [debug] [Thread-2 (]: Finished running node test.spotify_elt_pipeline.not_null_mart_artist_summary_artist_id.7fea407d8e
+[0m19:11:50.585051 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.190 seconds
+[0m19:11:50.586647 [info ] [Thread-4 (]: 8 of 10 PASS unique_stg_artists_artist_id ...................................... [[32mPASS[0m in 0.21s]
+[0m19:11:50.587272 [debug] [Thread-4 (]: Finished running node test.spotify_elt_pipeline.unique_stg_artists_artist_id.9f88e38d1f
+[0m19:11:50.735550 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.289 seconds
+[0m19:11:50.737233 [info ] [Thread-3 (]: 10 of 10 PASS unique_stg_tracks_track_id ....................................... [[32mPASS[0m in 0.30s]
+[0m19:11:50.737847 [debug] [Thread-3 (]: Finished running node test.spotify_elt_pipeline.unique_stg_tracks_track_id.29686655df
+[0m19:11:51.408090 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 1.008 seconds
+[0m19:11:51.409944 [info ] [Thread-5 (]: 9 of 10 PASS unique_stg_audio_features_track_id ................................ [[32mPASS[0m in 1.02s]
+[0m19:11:51.410755 [debug] [Thread-5 (]: Finished running node test.spotify_elt_pipeline.unique_stg_audio_features_track_id.17c1cb4cfe
+[0m19:11:51.413846 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:11:51.414168 [debug] [MainThread]: Connection 'list_SPOTIFY_DB_STAGING' was left open.
+[0m19:11:51.414372 [debug] [MainThread]: On list_SPOTIFY_DB_STAGING: Close
+[0m19:11:51.530954 [debug] [MainThread]: Connection 'test.spotify_elt_pipeline.unique_stg_audio_features_track_id.17c1cb4cfe' was left open.
+[0m19:11:51.531330 [debug] [MainThread]: On test.spotify_elt_pipeline.unique_stg_audio_features_track_id.17c1cb4cfe: Close
+[0m19:11:51.658212 [debug] [MainThread]: Connection 'test.spotify_elt_pipeline.unique_stg_artists_artist_id.9f88e38d1f' was left open.
+[0m19:11:51.658612 [debug] [MainThread]: On test.spotify_elt_pipeline.unique_stg_artists_artist_id.9f88e38d1f: Close
+[0m19:11:51.777239 [debug] [MainThread]: Connection 'test.spotify_elt_pipeline.not_null_mart_artist_summary_artist_id.7fea407d8e' was left open.
+[0m19:11:51.777675 [debug] [MainThread]: On test.spotify_elt_pipeline.not_null_mart_artist_summary_artist_id.7fea407d8e: Close
+[0m19:11:51.894969 [debug] [MainThread]: Connection 'test.spotify_elt_pipeline.unique_stg_tracks_track_id.29686655df' was left open.
+[0m19:11:51.895381 [debug] [MainThread]: On test.spotify_elt_pipeline.unique_stg_tracks_track_id.29686655df: Close
+[0m19:11:52.006099 [info ] [MainThread]: 
+[0m19:11:52.006654 [info ] [MainThread]: Finished running 10 data tests in 0 hours 0 minutes and 4.53 seconds (4.53s).
+[0m19:11:52.009879 [debug] [MainThread]: Command end result
+[0m19:11:52.040615 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\samee\Documents\spotify-elt-pipeline\dbt\target\manifest.json
+[0m19:11:52.043105 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\samee\Documents\spotify-elt-pipeline\dbt\target\semantic_manifest.json
+[0m19:11:52.048440 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\samee\Documents\spotify-elt-pipeline\dbt\target\run_results.json
+[0m19:11:52.048794 [info ] [MainThread]: 
+[0m19:11:52.049521 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m19:11:52.049944 [info ] [MainThread]: 
+[0m19:11:52.050343 [info ] [MainThread]: Done. PASS=10 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=10
+[0m19:11:52.051347 [debug] [MainThread]: Command `dbt test` succeeded at 19:11:52.051170 after 6.21 seconds
+[0m19:11:52.051720 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234893225D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234ACA2A990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234ACA2AA40>]}
+[0m19:11:52.051998 [debug] [MainThread]: Flushing usage events
+[0m19:11:52.473518 [debug] [MainThread]: An error was encountered while trying to flush usage events

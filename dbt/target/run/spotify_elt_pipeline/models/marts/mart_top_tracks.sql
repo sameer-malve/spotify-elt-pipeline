@@ -13,16 +13,18 @@ SELECT
     t.track_name,
     t.duration_ms,
     t.duration_minutes,
-    t.is_explicit,
-    t.popularity,
+    CAST(t.is_explicit AS BOOLEAN) AS is_explicit,
     t.album_id,
     t.album_name,
-    ROUND((t.popularity * 0.6 + (1 - t.is_explicit::INT) * 0.4) * 100, 2) AS mood_score,
+    ROUND(
+        CASE WHEN t.is_explicit THEN 0.3 ELSE 0.7 END
+        + (t.duration_ms / 1000000.0),
+        4
+    ) AS mood_score,
     CASE
-        WHEN t.is_explicit = TRUE  AND t.popularity > 70 THEN 'Explicit Banger'
-        WHEN t.is_explicit = FALSE AND t.popularity > 70 THEN 'Family Friendly Hit'
-        WHEN t.popularity < 40                            THEN 'Underground'
-        ELSE 'Mid Tier'
+        WHEN t.is_explicit = TRUE                                THEN 'Explicit Track'
+        WHEN t.is_explicit = FALSE AND t.duration_minutes > 3.5  THEN 'Clean Track'
+        ELSE 'Short Clean'
     END AS audio_profile,
     t._loaded_at
 FROM SPOTIFY_DB.STAGING.stg_tracks t
